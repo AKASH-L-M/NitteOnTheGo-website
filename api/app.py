@@ -8,7 +8,7 @@ def home():
     return render_template('index.html')
 
 @app.route('/mangaluru')
-def home():
+def route_mang():
     return render_template('mangaluru.html')
 
 @app.route('/test')
