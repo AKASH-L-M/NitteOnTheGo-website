@@ -51,6 +51,15 @@
        
 
       </div>
+      <script>
+
+          var countdownfunction = setInterval(function() {
+            var today = new Date();
+            document.getElementById("timer").innerHTML = today;
+          }, 1000);
+      </script>
+
+           
   </header>
   <main>
     <article>
@@ -64,6 +73,7 @@
           <p class="section-subtitle">From Nitte</p>
 
           <h2 class="h2 section-title">DEBUG: Testing Mangaluru page route</h2>
+          <p id="timer" style="font-size:30px"></p>
 
           <ul class="popular-list">
 
@@ -187,18 +197,4 @@
 </html>
 
 
-<!-- 
-{% comment %} <!doctype html>
-<html>
-   <body>
-      <table border = 1>
-         {% for key, value in result.items() %}
-            <tr>
-               <th> {{ key }} </th>
-               <td> {{ value }} </td>
-            </tr>
-         {% endfor %}
-      </table>
-   </body>
-</html> {% endcomment %}
--->
+
