@@ -67,4 +67,31 @@ window.addEventListener("scroll", function () {
 
 });
 
+
+function parseTime(cTime)
+{
+  if (cTime == '') return null;
+  var d = new Date();
+  var time = cTime.match(/(\d+)(:(\d\d))?\s*(p?)/);
+  d.setHours( parseInt(time[1]) + ( ( parseInt(time[1]) < 12 && time[4] ) ? 12 : 0) );
+  d.setMinutes( parseInt(time[3]) || 0 );
+  d.setSeconds(0, 0);
+  return d;
+}
+
+var d = new Date().toJSON().slice(11, 19);
+
+var cStart = d;
+var cStop = "13:10:15";
+
+if (cStart != "" && cStop != "") {
+    var tStart = parseTime(cStart);
+    var tStop = parseTime(cStop);
+
+    var today = "Minutes:"+(tStop - tStart)/(1000*60);
+    document.getElementById("timediff").innerHTML = today;
+}
+else {
+    
+}
       
