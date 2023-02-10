@@ -61,6 +61,21 @@ var countdownfunction = setInterval(function() {
  
 }, 1000);
 
+var timeDifference = setInterval(function() {
+  var d = new Date().toJSON().slice(11, 19);
+  var today;
+  var cStart = d;
+  var cStop = "12:10:15";
+
+  if (cStart != "" && cStop != "") {
+      var tStart = parseTime(cStart);
+      var tStop = parseTime(cStop);
+
+      today = "Minutes:"+(tStop - tStart)/(1000*60);
+  }
+   document.getElementById("timediff").innerHTML = today;
+}, 1000);
+
 /**
  * header sticky & go to top
  */
