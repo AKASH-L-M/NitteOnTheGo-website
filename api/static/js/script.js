@@ -58,20 +58,10 @@ var countdownfunction = setInterval(function() {
   var today = hour + ":" + minute + ":" + second;
 
   document.getElementById("timer").innerHTML = today;
+  document.getElementById("timediff").innerHTML = today;
   
 
-  var d = new Date().toJSON().slice(11, 19);
-
-  var cStart = d;
-  var cStop = "13:10:15";
-
-  if (cStart != "" && cStop != "") {
-      var tStart = parseTime(cStart);
-      var tStop = parseTime(cStop);
-
-      var today = "Minutes:"+(tStop - tStart)/(1000*60);
-      document.getElementById("timediff").innerHTML = today;
-  }
+ 
 }, 1000);
 
    
