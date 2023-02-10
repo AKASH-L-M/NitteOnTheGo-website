@@ -5,17 +5,6 @@
  */
 
 
-function parseTime(cTime)
-{
-  if (cTime == '') return null;
-  var d = new Date();
-  var time = cTime.match(/(\d+)(:(\d\d))?\s*(p?)/);
-  d.setHours( parseInt(time[1]) + ( ( parseInt(time[1]) < 12 && time[4] ) ? 12 : 0) );
-  d.setMinutes( parseInt(time[3]) || 0 );
-  d.setSeconds(0, 0);
-  return d;
-}
-
 const overlay = document.querySelector("[data-overlay]");
 const navOpenBtn = document.querySelector("[data-nav-open-btn]");
 const navbar = document.querySelector("[data-navbar]");
@@ -58,24 +47,10 @@ var countdownfunction = setInterval(function() {
   var today = hour + ":" + minute + ":" + second;
 
   document.getElementById("timer").innerHTML = today;
- 
+  document.getElementById("timediff").innerHTML = today;
 }, 1000);
 
-var timeDifference = setInterval(function() {
-  var d = new Date().toJSON().slice(11, 19);
-  var today;
-  var cStart = d;
-  var cStop = "12:10:15";
 
-  if (cStart != "" && cStop != "") {
-      var tStart = parseTime(cStart);
-      var tStop = parseTime(cStop);
-
-      var temp = "Minutes:"+(tStop - tStart)/(1000*60);
-      today = temp.toString();
-  }
-   document.getElementById("timediff").innerHTML = today;
-}, 1000);
 
 /**
  * header sticky & go to top
