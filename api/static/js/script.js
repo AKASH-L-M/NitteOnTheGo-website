@@ -71,7 +71,8 @@ var timeDifference = setInterval(function() {
       var tStart = parseTime(cStart);
       var tStop = parseTime(cStop);
 
-      today = "Minutes:"+(tStop - tStart)/(1000*60);
+      var temp = "Minutes:"+(tStop - tStart)/(1000*60);
+      today = temp.toString();
   }
    document.getElementById("timediff").innerHTML = today;
 }, 1000);
