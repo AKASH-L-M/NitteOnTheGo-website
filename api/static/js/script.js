@@ -60,9 +60,6 @@ var countdownfunction = setInterval(function() {
       var today = "Minutes:"+(tStop - tStart)/(1000*60);
       document.getElementById("timediff").innerHTML = today;
   }
-  else {
-
-  }
 }, 1000);
 
    
