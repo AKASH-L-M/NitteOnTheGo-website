@@ -49,7 +49,6 @@ var countdownfunction = setInterval(function() {
   var today = hour + ":" + minute + ":" + second;
 
   document.getElementById("timer").innerHTML = today;
-  document.getElementById("timediff").innerHTML = today;
  
 }, 1000);
 
