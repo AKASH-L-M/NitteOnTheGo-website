@@ -4,9 +4,6 @@
  * navbar toggle
  */
 
-
-
-
 const overlay = document.querySelector("[data-overlay]");
 const navOpenBtn = document.querySelector("[data-nav-open-btn]");
 const navbar = document.querySelector("[data-navbar]");
@@ -29,7 +26,6 @@ navToggleEvent(navLinks);
 
 
 
-
 /**
  * header sticky & go to top
  */
@@ -48,7 +44,6 @@ window.addEventListener("scroll", function () {
   }
 
 });
-
 
 /**
  * Function definition for displaying live time on the screen
@@ -74,7 +69,7 @@ var countdownfunction = setInterval(function() {
 
   var today = hour + ":" + minute + ":" + second;
 
-  document.getElementById("time").innerHTML = today;
+  document.getElementById("timer").innerHTML = today;
  
 }, 1000);
    
