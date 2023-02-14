@@ -2,13 +2,12 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def home():
     return render_template('index.html')
 
 @app.route('/mangaluru')
-def route_mang();
+def route_mang():
     return render_template('mangaluru.html')
 
 @app.route('/test')
