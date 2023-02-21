@@ -58,6 +58,5 @@ window.addEventListener("scroll", function () {
     const formattedString = dateString.replace(", ", " - ");
     timeDisplay.textContent = formattedString;
   }
-    setInterval(refreshTime, 1000);
 
    
